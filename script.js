@@ -9,7 +9,7 @@ async function checkWeather(city) {
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weather").style.display = "none";
     } else {
-        var data = await response.json();
+        const data = await response.json();
         document.querySelector(".weather").style.display = "block";
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
